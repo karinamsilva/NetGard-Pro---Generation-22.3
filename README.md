@@ -1,59 +1,55 @@
-# Net Gard Pro
+# 🛡️ Net Guard Pro
+**Segurança, Visibilidade e Controle para a Nossa Rede**
 
-Net Gard Pro é um software avançado de monitoramento, segurança e gestão de redes, projetado para oferecer controle total, detecção inteligente de ameaças e automação de respostas. Ideal para empresas, equipes de TI e administradores de sistemas que buscam visibilidade completa e segurança robusta em seus ambientes de rede.
+O **Net Guard Pro** é a nossa solução interna para garantir que a rede da empresa permaneça rápida, segura e estável. Ele atua como um "sistema imunológico" digital, monitorando o tráfego, bloqueando ameaças automaticamente e ajudando a equipe de TI a dormir tranquila.
 
----
-
-## Índice
-- [Visão Geral](#visão-geral)
-- [Principais Recursos](#principais-recursos)
-- [Arquitetura do Sistema](#arquitetura-do-sistema)
-- [Requisitos do Sistema](#requisitos-do-sistema)
-- [Instalação](#instalação)
-- [Configuração Inicial](#configuração-inicial)
-- [Como Usar](#como-usar)
-- [Roadmap](#roadmap)
-- [Contribuindo](#contribuindo)
-- [Licença](#licença)
-- [Contato](#contato)
+> **Para quem é este documento?**
+> * **Colaboradores (Não-técnicos):** Para entender como nossa segurança funciona e como acessar relatórios.
+> * **Desenvolvedores e TI:** Para instalar, configurar e manter o sistema rodando.
 
 ---
 
-## Visão Geral
-
-O Net Gard Pro foi desenvolvido para fornecer segurança avançada e monitoramento detalhado de redes corporativas. Ele combina análise inteligente, interface moderna e mecanismos de resposta automática para apoiar o trabalho de administradores em ambientes de alta demanda.
-
----
-
-## Principais Recursos
-
-### Monitoramento em Tempo Real
-- Acompanhamento contínuo do tráfego de rede.
-- Gráficos e métricas detalhadas sobre latência, pacotes e utilização de dispositivos.
-- Identificação imediata de quedas ou picos.
-
-### Detecção Inteligente de Ameaças
-- Algoritmos de machine learning para identificar comportamentos anômalos.
-- Detecção de ataques como DDoS, brute force, escaneamento suspeito e intrusões.
-- Classificação de risco para priorização de incidentes.
-
-### Automação de Respostas
-- Bloqueio automático de IPs suspeitos.
-- Scripts customizáveis para respostas a eventos específicos.
-- Fluxos de ação baseados em políticas internas.
-
-### Dashboard Personalizável
-- Interface web moderna e responsiva.
-- Widgets configuráveis.
-- Relatórios e logs exportáveis.
-
-### Alertas Inteligentes
-- Notificações via e-mail, Slack, Teams ou SMS.
-- Regras ajustáveis para alertas críticos, moderados e informativos.
+## 📑 Índice
+1.  [Para Leigos: O que o Net Guard Pro faz?](#para-leigos-o-que-o-net-guard-pro-faz)
+2.  [Principais Recursos](#principais-recursos)
+3.  [Arquitetura (Visão Técnica)](#arquitetura-visão-técnica)
+4.  [Instalação (Apenas TI/Devs)](#instalação-apenas-tidevs)
+5.  [Primeiros Passos e Configuração](#primeiros-passos-e-configuração)
+6.  [Guia de Uso](#guia-de-uso)
+7.  [O Futuro (Roadmap)](#o-futuro-roadmap)
+8.  [Suporte](#suporte)
 
 ---
 
+## 💡 Para Leigos: O que o Net Guard Pro faz?
+Imagine que a rede da nossa empresa é um prédio comercial movimentado.
 
+* **Monitoramento:** O Net Guard Pro é como as câmeras de segurança e a portaria. Ele vê quem entra, quem sai e se alguém está carregando algo suspeito.
+* **Detecção de Ameaças:** Se alguém tentar arrombar uma porta (ataque de força bruta) ou se uma multidão tentar bloquear a entrada (DDoS), o sistema percebe na hora.
+* **Automação:** Ele não apenas avisa; ele age. É como se as portas se trancassem automaticamente ao detectar um ladrão, antes mesmo do segurança chegar.
+
+---
+
+## 🚀 Principais Recursos
+
+### 👁️ Visibilidade Total (Monitoramento)
+* **Tempo Real:** Veja o que está acontecendo agora na rede.
+* **Métricas Claras:** Gráficos fáceis de entender sobre velocidade e uso de dados.
+* **Saúde da Rede:** Identifica se a internet está lenta ou se algum equipamento caiu.
+
+### 🛡️ Segurança Inteligente
+* **IA Sentinela:** Usa Inteligência Artificial para aprender o que é "normal" e alertar sobre o que é "estranho".
+* **Priorização:** Classifica problemas por gravidade (Crítico, Alto, Médio), para focarmos no que importa.
+
+### 🤖 Resposta Automática
+* **Bloqueio Imediato:** IPs maliciosos são barrados instantaneamente.
+* **Regras da Casa:** O sistema segue as políticas da empresa automaticamente (ex: alertar se alguém baixar arquivos gigantes de madrugada).
+
+### 📊 Dashboard e Alertas
+* **Interface Amigável:** Tudo acessível via navegador web.
+* **Notificações:** Receba alertas onde preferir (E-mail, Slack, Teams ou SMS).
+
+---
 
 ## Arquitetura do Sistema
 
@@ -70,90 +66,115 @@ flowchart TB
     C --> D
 
 ```
-### Usando Docker (recomendado)
+Explicação do Fluxo:
 
-```bash
-git clone https://github.com/sua-org/net-gard-pro.git
-cd net-gard-pro
+Coletor: Captura dados brutos da rede.
+
+Engine: O "cérebro" que analisa os dados e decide se há uma ameaça.
+
+API: A ponte segura que transporta as informações.
+
+Interface: Onde o usuário vê os gráficos e alertas.
+
+### 💻 Instalação (Apenas TI/Devs)
+⚠️ Se você não é da equipe técnica, pule para a seção "Primeiros Passos".
+
+Pré-requisitos
+Git instalado
+
+## Docker e Docker Compose (Recomendado)
+
+Python 3.9+ (Para instalação manual)
+
+Opção A: Via Docker (Recomendada 🐳)
+A maneira mais rápida e limpa de rodar o projeto.
+
+```Bash
+
+# 1. Baixe o código
+git clone [https://github.com/sua-org/net-guard-pro.git](https://github.com/sua-org/net-guard-pro.git)
+
+# 2. Entre na pasta
+cd net-guard-pro
+
+# 3. Suba os containers
 docker-compose up -d
 ```
-### Instalação Manual
 
-```bash
-git clone https://github.com/sua-org/net-gard-pro.git
-cd net-gard-pro
+Opção B: Instalação Manual
+Para desenvolvimento ou ambientes sem Docker.
+
+
+```Bash
+
+git clone [https://github.com/sua-org/net-guard-pro.git](https://github.com/sua-org/net-guard-pro.git)
+cd net-guard-pro
+
+# Instala dependências
 pip install -r requirements.txt
+
+# Configura o banco de dados
 python manage.py migrate
+
+# Inicia o servidor
 python manage.py runserver
+
 ```
 
-## Configuração Inicial
+### 🏁 Primeiros Passos e Configuração
+Após a instalação, o sistema estará acessível no seu navegador.
 
-Acesse o dashboard em:
-http://localhost:8000
+Acesso: Abra http://localhost:8000 (ou o IP do servidor).
 
-Crie um usuário administrador.
+Login: Utilize as credenciais de administrador criadas na instalação.
 
-Adicione agentes ou fontes SNMP/NetFlow.
+Conexão: Vá em Configurações > Fontes e adicione os dispositivos (agentes SNMP ou NetFlow) que deseja monitorar.
 
-Configure alertas e prioridades.
+Ajuste Fino: Configure os canais de notificação (ex: webhook do Slack) para não perder nenhum alerta.
 
-Personalize o dashboard conforme sua necessidade.
+### 📖 Guia de Uso Rápido
+Para verificar a saúde da rede
+Vá para Rede > Visão Geral.
 
-### Como Usar
-Monitoramento
+O que procurar: Gráficos vermelhos ou picos repentinos de uso.
 
-Acesse “Rede > Visão Geral” para visualizar tráfego, dispositivos e métricas.
+Se houver um incidente de segurança
+Vá para Segurança > Incidentes.
 
-## Incidentes de Segurança
+O que fazer: Verifique a "Pontuação de Risco". Se for alta, o sistema já deve ter bloqueado, mas vale uma análise manual.
 
-Acesse “Segurança > Incidentes”.
+Para gerar relatórios (Gerentes/Auditores)
+Vá para Relatórios > Exportar.
 
-Consulte a pontuação de risco de cada detecção.
+Você pode baixar PDFs ou planilhas para auditorias de conformidade.
 
-Aja manualmente ou deixe a automação resolver.
+### 🗺️ O Futuro (Roadmap)
+Estamos constantemente melhorando o Net Guard Pro. Aqui está o que vem por aí:
 
-## Automação
+[ ] 📱 Aplicativo Mobile (iOS/Android)
 
-Em “Configurações > Automação”, configure regras como:
+[ ] ☁️ Integração nativa com AWS Security Hub
 
-Bloqueio automático de IP após tentativas de login falhas.
+[ ] ⚖️ Painel de Compliance automático (LGPD/ISO)
 
-Alerta quando o uso de banda exceder limites definidos.
+[ ] 🕸️ Suporte a Kubernetes Network Policies
 
-## Relatórios
+### 🤝 Contribuindo
+Quer ajudar a melhorar o código?
 
-Acesse “Relatórios > Exportar” e gere arquivos para auditoria.
+Faça um Fork do projeto.
 
-### Roadmap
+Crie uma Branch para sua feature (git checkout -b feature/nova-melhoria).
 
- Aplicativo mobile
+Envie um Pull Request e aguarde o Code Review da equipe.
 
- Integração com AWS Security Hub
+## 📞 Suporte e Contato
+Dúvidas, sugestões ou encontrou um bug?
 
- Painel de compliance (ISO, LGPD)
+Time Técnico: Abra uma issue no GitHub ou chame no Slack #dev-netguard.
 
- Módulo avançado de resposta automatizada
+E-mail: contato@netguardpro.com
 
- Suporte a Kubernetes Network Policies
+# Licença: MIT License (Software Livre).
 
-### Contribuindo
-
-Contribuições são bem-vindas.
-
-Faça um fork do repositório.
-
-Crie uma branch para a sua feature.
-
-Envie um Pull Request.
-
-Aguarde revisão da equipe.
-
-### Licença
-
-Este projeto está licenciado sob a MIT License. Consulte o arquivo LICENSE para mais detalhes.
-
-### Contato
-
-Equipe Net Gard Pro
-E-mail: contato@netgardpro.com
+Documentação atualizada em: Dezembro/2025
