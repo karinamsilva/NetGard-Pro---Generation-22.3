@@ -126,9 +126,13 @@ Você pode baixar PDFs ou planilhas para auditorias de conformidade.
 
 ### 🗺 O Futuro (Roadmap)
 Estamos constantemente melhorando o Net Guard Pro. Aqui está o que vem por aí:
+
 [ ] 📱 Aplicativo Mobile (iOS/Android)
+
 [ ] ☁ Integração nativa com AWS Security Hub
+
 [ ] ⚖ Painel de Compliance automático (LGPD/ISO)
+
 [ ] 🕸 Suporte a Kubernetes Network Policies
 
 ### 🤝 Contribuindo
