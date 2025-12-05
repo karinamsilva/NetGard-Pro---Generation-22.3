@@ -51,21 +51,26 @@ Imagine que a rede da nossa empresa é um prédio comercial movimentado.
 
 ---
 
-## Arquitetura do Sistema
+## 🏗️ Arquitetura do Sistema
 
 ```mermaid
-
 flowchart TB
+    subgraph Frontend
     A[Interface Web]
+    end
+    subgraph Backend
     B[API REST Secure]
     C[Engine de Análise]
+    end
+    subgraph Infra
     D[Coletor de Telemetria]
+    end
 
     A --> B
     B --> C
     C --> D
-
 ```
+
 Explicação do Fluxo:
 
 Coletor: Captura dados brutos da rede.
@@ -82,11 +87,11 @@ Interface: Onde o usuário vê os gráficos e alertas.
 Pré-requisitos
 Git instalado
 
-## Docker e Docker Compose (Recomendado)
+Docker e Docker Compose (Recomendado)
 
-Python 3.9+ (Para instalação manual)
+Python 3.9+ (Apenas para instalação manual)
 
-Opção A: Via Docker (Recomendada 🐳)
+# Opção A: Via Docker (Recomendada 🐳)
 A maneira mais rápida e limpa de rodar o projeto.
 
 ```Bash
@@ -99,11 +104,11 @@ cd net-guard-pro
 
 # 3. Suba os containers
 docker-compose up -d
+
 ```
 
-Opção B: Instalação Manual
+# Opção B: Instalação Manual
 Para desenvolvimento ou ambientes sem Docker.
-
 
 ```Bash
 
@@ -118,7 +123,6 @@ python manage.py migrate
 
 # Inicia o servidor
 python manage.py runserver
-
 ```
 
 ### 🏁 Primeiros Passos e Configuração
@@ -136,12 +140,12 @@ Ajuste Fino: Configure os canais de notificação (ex: webhook do Slack) para n�
 Para verificar a saúde da rede
 Vá para Rede > Visão Geral.
 
-O que procurar: Gráficos vermelhos ou picos repentinos de uso.
+## O que procurar: Gráficos vermelhos ou picos repentinos de uso.
 
 Se houver um incidente de segurança
 Vá para Segurança > Incidentes.
 
-O que fazer: Verifique a "Pontuação de Risco". Se for alta, o sistema já deve ter bloqueado, mas vale uma análise manual.
+## O que fazer: Verifique a "Pontuação de Risco". Se for alta, o sistema já deve ter bloqueado, mas vale uma análise manual.
 
 Para gerar relatórios (Gerentes/Auditores)
 Vá para Relatórios > Exportar.
@@ -168,13 +172,13 @@ Crie uma Branch para sua feature (git checkout -b feature/nova-melhoria).
 
 Envie um Pull Request e aguarde o Code Review da equipe.
 
-## 📞 Suporte e Contato
+### 📞 Suporte e Contato
 Dúvidas, sugestões ou encontrou um bug?
 
 Time Técnico: Abra uma issue no GitHub ou chame no Slack #dev-netguard.
 
 E-mail: contato@netguardpro.com
 
-# Licença: MIT License (Software Livre).
+## Licença: MIT License (Software Livre).
 
 Documentação atualizada em: Dezembro/2025
