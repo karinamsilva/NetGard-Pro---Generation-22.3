@@ -1,95 +1,146 @@
-# 🛡️ NetGard Solutions: Client Security Best Practices
-
-**Target Audience:** Clients & Partners  
-**Category:** Educational / Security Awareness  
-**Last Update:** 2025-12-05
-
+# 🛡 Net Guard Pro
+**Segurança, Visibilidade e Controle para a Nossa Rede**
+O **Net Guard Pro** é a nossa solução interna para garantir que a rede da empresa
+permaneça rápida, segura e estável. Ele atua como um "sistema imunológico" digital,
+monitorando o tráfego, bloqueando ameaças automaticamente e ajudando a equipe de TI a
+dormir tranquila.
+> **Para quem é este documento?**
+> * **Colaboradores (Não-técnicos):** Para entender como nossa segurança funciona e como
+acessar relatórios.
+> * **Desenvolvedores e TI:** Para instalar, configurar e manter o sistema rodando.
 ---
-
-## 🌍 Languages / Idiomas
-
-* [🇧🇷 Versão em Português](#-versão-em-português)
-* [🇪🇸 Versión en Español](#-versión-en-español)
-
+## 📑 Índice
+1. [Para Leigos: O que o Net Guard Pro faz?](#para-leigos-o-que-o-net-guard-pro-faz)
+2. [Principais Recursos](#principais-recursos)
+3. [Arquitetura (Visão Técnica)](#arquitetura-visão-técnica)
+4. [Instalação (Apenas TI/Devs)](#instalação-apenas-tidevs)
+5. [Primeiros Passos e Configuração](#primeiros-passos-e-configuração)
+6. [Guia de Uso](#guia-de-uso)
+7. [O Futuro (Roadmap)](#o-futuro-roadmap)
+8. [Suporte](#suporte)
 ---
-
-<a name="pt-br"></a>
-## 🇧🇷 Versão em Português
-
-**Título:** Blindando Seu Negócio: 5 Pilares de Segurança que Recomendamos aos Nossos Parceiros  
-**Tempo de leitura:** 3 min
-
-### Olá, parceiro da NetGard!
-
-Na NetGard Solutions, acreditamos que a tecnologia só é útil quando é segura. Frequentemente, vemos empresas investirem em ferramentas caras, mas falharem no básico da higiene digital.
-
-Como seus parceiros em cibersegurança, queremos compartilhar as práticas essenciais que recomendamos para manter a operação da sua empresa longe de riscos. Compartilhe este guia com sua equipe!
-
-### 1. Senhas: O Básico Bem Feito
-Senhas fracas ainda são a principal porta de entrada para ataques.
-* **Complexidade:** Incentive o uso de frases-senha (*passphrases*) em vez de palavras únicas.
-* **Reutilização é perigosa:** Oriente seus colaboradores a nunca usarem senhas pessoais (redes sociais) em sistemas corporativos.
-* **Gerenciadores de Senha:** Considere adotar uma solução de cofre de senhas corporativo para que ninguém precise "anotar no papel".
-
-### 2. A Cultura Anti-Phishing
-O "Hacking Humano" é a ameaça número 1.
-* **Desconfie da Urgência:** E-mails que exigem ação imediata (boletos vencidos, bloqueios de conta) devem ser verificados com cautela.
-* **Verificação de Canal Cruzado:** Se receber um pedido estranho de um diretor ou fornecedor por e-mail, confirme ligando para a pessoa ou usando o chat interno.
-* **Reporte:** Crie um canal fácil para que seus funcionários denunciem e-mails suspeitos à sua equipe de TI.
-
-### 3. Autenticação Multifator (MFA): Inegociável
-Se o sistema permite, o MFA deve estar ativado. Isso garante que, mesmo se uma senha vazar, o criminoso não conseguirá acessar a conta sem o segundo código (geralmente no celular). É a barreira de segurança com melhor custo-benefício que existe.
-
-### 4. Trabalho Remoto Seguro
-Se sua equipe trabalha de casa ou viaja:
-* **VPN é Obrigatória:** Nunca permita o acesso a dados sensíveis da empresa através de Wi-Fi público (aeroportos, hotéis) sem o uso de uma VPN (Rede Privada Virtual) criptografada.
-* **Separação de Dispositivos:** O computador da empresa deve ser para uso da empresa, evitando riscos trazidos por downloads pessoais ou uso compartilhado com familiares.
-
-### 5. Segurança Física e Bloqueio de Tela
-Dados podem ser roubados visualmente.
-* Instrua sua equipe a bloquear a tela (`Win + L` ou `Cmd + Ctrl + Q`) sempre que se levantarem da mesa, especialmente em espaços de coworking ou escritórios abertos.
-
-> **Precisa de ajuda?** > Implementar cultura de segurança pode ser desafiador. Se sua empresa precisa de uma auditoria de segurança ou treinamento para funcionários, o time da **NetGard Solutions** está à disposição para apoiar.
-
+## 💡 Para Leigos: O que o Net Guard Pro faz?
+Imagine que a rede da nossa empresa é um prédio comercial movimentado.
+* **Monitoramento:** O Net Guard Pro é como as câmeras de segurança e a portaria. Ele vê
+quem entra, quem sai e se alguém está carregando algo suspeito.
+* **Detecção de Ameaças:** Se alguém tentar arrombar uma porta (ataque de força bruta) ou
+se uma multidão tentar bloquear a entrada (DDoS), o sistema percebe na hora.
+* **Automação:** Ele não apenas avisa; ele age. É como se as portas se trancassem
+automaticamente ao detectar um ladrão, antes mesmo do segurança chegar.
 ---
-
-<a name="es"></a>
-## 🇪🇸 Versión en Español
-
-**Título:** Blindando Su Negocio: 5 Pilares de Seguridad que Recomendamos a Nuestros Socios  
-**Tiempo de lectura:** 3 min
-
-### ¡Hola, socio de NetGard!
-
-En NetGard Solutions, creemos que la tecnología solo es útil cuando es segura. A menudo, vemos empresas invertir en herramientas costosas, pero fallar en lo básico de la higiene digital.
-
-Como sus socios en ciberseguridad, queremos compartir las prácticas esenciales que recomendamos para mantener la operación de su empresa lejos de riesgos. ¡Comparta esta guía con su equipo!
-
-### 1. Contraseñas: Lo Básico Bien Hecho
-Las contraseñas débiles siguen siendo la principal puerta de entrada para los ataques.
-* **Complejidad:** Incentive el uso de frases de contraseña (*passphrases*) en lugar de palabras únicas.
-* **La reutilización es peligrosa:** Oriente a sus colaboradores a nunca usar contraseñas personales (redes sociales) en sistemas corporativos.
-* **Gestores de Contraseñas:** Considere adoptar una solución de bóveda de contraseñas corporativa para que nadie necesite "anotar en papel".
-
-### 2. La Cultura Anti-Phishing
-El "Hacking Humano" es la amenaza número 1.
-* **Desconfíe de la Urgencia:** Los correos que exigen acción inmediata (facturas vencidas, bloqueos de cuenta) deben verificarse con cautela.
-* **Verificación de Canal Cruzado:** Si recibe un pedido extraño de un director o proveedor por correo, confírmelo llamando a la persona o usando el chat interno.
-* **Reporte:** Cree un canal fácil para que sus empleados denuncien correos sospechosos a su equipo de TI.
-
-### 3. Autenticación Multifactor (MFA): Innegociable
-Si el sistema lo permite, el MFA debe estar activado. Esto garantiza que, incluso si una contraseña se filtra, el delincuente no podrá acceder a la cuenta sin el segundo código (generalmente en el celular). Es la barrera de seguridad con mejor costo-beneficio que existe.
-
-### 4. Trabajo Remoto Seguro
-Si su equipo trabaja desde casa o viaja:
-* **VPN es Obligatoria:** Nunca permita el acceso a datos sensibles de la empresa a través de Wi-Fi público (aeropuertos, hoteles) sin el uso de una VPN (Red de Privada Virtual) encriptada.
-* **Separación de Dispositivos:** La computadora de la empresa debe ser para uso de la empresa, evitando riesgos traídos por descargas personales o uso compartido con familiares.
-
-### 5. Seguridad Física y Bloqueo de Pantalla
-Los datos pueden ser robados visualmente.
-* Instruya a su equipo a bloquear la pantalla (`Win + L` o `Cmd + Ctrl + Q`) siempre que se levanten del escritorio, especialmente en espacios de coworking u oficinas abiertas.
-
-> **¿Necesita ayuda?** > Implementar una cultura de seguridad puede ser desafiante. Si su empresa necesita una auditoría de seguridad o capacitación para empleados, el equipo de **NetGard Solutions** está a disposición para apoyar.
-
+## 🚀 Principais Recursos
+### 👁 Visibilidade Total (Monitoramento)
+* **Tempo Real:** Veja o que está acontecendo agora na rede.
+* **Métricas Claras:** Gráficos fáceis de entender sobre velocidade e uso de dados.
+* **Saúde da Rede:** Identifica se a internet está lenta ou se algum equipamento caiu.
+### 🛡 Segurança Inteligente
+* **IA Sentinela:** Usa Inteligência Artificial para aprender o que é "normal" e alertar sobre o
+que é "estranho"
+.
+* **Priorização:** Classifica problemas por gravidade (Crítico, Alto, Médio), para focarmos no
+que importa.
+### 🤖 Resposta Automática
+* **Bloqueio Imediato:** IPs maliciosos são barrados instantaneamente.
+* **Regras da Casa:** O sistema segue as políticas da empresa automaticamente (ex: alertar
+se alguém baixar arquivos gigantes de madrugada).
+### 📊 Dashboard e Alertas
+* **Interface Amigável:** Tudo acessível via navegador web.
+* **Notificações:** Receba alertas onde preferir (E-mail, Slack, Teams ou SMS).
 ---
-© 2025 NetGard Solutions. Sharing knowledge for a safer web.
+## 🏗 Arquitetura do Sistema
+```mermaid
+flowchart TB
+subgraph Frontend
+A[Interface Web]
+end
+subgraph Backend
+B[API REST Secure]
+C[Engine de Análise]
+end
+subgraph Infra
+D[Coletor de Telemetria]
+end
+A --> B
+B --> C
+C --> D
+```
+Explicação do Fluxo:
+Coletor: Captura dados brutos da rede.
+Engine: O "cérebro" que analisa os dados e decide se há uma ameaça.
+API: A ponte segura que transporta as informações.
+Interface: Onde o usuário vê os gráficos e alertas.
+
+### 💻 Instalação (Apenas TI/Devs)
+⚠ Se você não é da equipe técnica, pule para a seção "Primeiros Passos"
+
+Pré-requisitos
+Git instalado
+Docker e Docker Compose (Recomendado)
+Python 3.9+ (Apenas para instalação manual)
+# Opção A: Via Docker (Recomendada 🐳)
+A maneira mais rápida e limpa de rodar o projeto.
+```Bash
+# 1. Baixe o código
+git clone
+[https://github.com/sua-org/net-guard-pro.git](https://github.com/sua-org/net-guard-pro.git)
+# 2. Entre na pasta
+cd net-guard-pro
+# 3. Suba os containers
+docker-compose up -d
+```
+# Opção B: Instalação Manual
+Para desenvolvimento ou ambientes sem Docker.
+```Bash
+git clone
+cd net-guard-pro
+[https://github.com/sua-org/net-guard-pro.git](https://github.com/sua-org/net-guard-pro.git)
+# Instala dependências
+pip install -r requirements.txt
+# Configura o banco de dados
+python manage.py migrate
+# Inicia o servidor
+python manage.py runserver
+```
+### 🏁 Primeiros Passos e Configuração
+Após a instalação, o sistema estará acessível no seu navegador.
+Acesso: Abra http://localhost:8000 (ou o IP do servidor).
+Login: Utilize as credenciais de administrador criadas na instalação.
+Conexão: Vá em Configurações > Fontes e adicione os dispositivos (agentes SNMP ou
+NetFlow) que deseja monitorar.
+Ajuste Fino: Configure os canais de notificação (ex: webhook do Slack) para não perder
+nenhum alerta.
+
+### 📖 Guia de Uso Rápido
+Para verificar a saúde da rede
+Vá para Rede > Visão Geral.
+## O que procurar: Gráficos vermelhos ou picos repentinos de uso.
+Se houver um incidente de segurança
+Vá para Segurança > Incidentes.
+
+## O que fazer: Verifique a "Pontuação de Risco"
+. Se for alta, o sistema já deve ter bloqueado,
+mas vale uma análise manual.
+Para gerar relatórios (Gerentes/Auditores)
+Vá para Relatórios > Exportar.
+Você pode baixar PDFs ou planilhas para auditorias de conformidade.
+
+### 🗺 O Futuro (Roadmap)
+Estamos constantemente melhorando o Net Guard Pro. Aqui está o que vem por aí:
+[ ] 📱 Aplicativo Mobile (iOS/Android)
+[ ] ☁ Integração nativa com AWS Security Hub
+[ ] ⚖ Painel de Compliance automático (LGPD/ISO)
+[ ] 🕸 Suporte a Kubernetes Network Policies
+
+### 🤝 Contribuindo
+Quer ajudar a melhorar o código?
+Faça um Fork do projeto.
+Crie uma Branch para sua feature (git checkout -b feature/nova-melhoria).
+Envie um Pull Request e aguarde o Code Review da equipe.
+
+### 📞 Suporte e Contato
+Dúvidas, sugestões ou encontrou um bug?
+Time Técnico: Abra uma issue no GitHub ou chame no Slack #dev-netguard.
+E-mail: contato@netguardpro.com
+
+## Licença: MIT License (Software Livre).
+Documentação atualizada em: Dezembro/2025
